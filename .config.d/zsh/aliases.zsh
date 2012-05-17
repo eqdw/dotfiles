@@ -11,7 +11,7 @@ alias "burke"="bundle exec rails console"
 alias "trt"="touch tmp/restart.txt"
 alias "rR"="rake routes"
 alias "rRg"="rake routes | grep"
-
+alias "rspec"="rspec -c"
 
 function bergm() {
   $EDITOR `bundle exec rails generate migration $1 | tail -n1 | awk '{print $3}'`
