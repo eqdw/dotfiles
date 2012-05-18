@@ -1,5 +1,5 @@
 export NAME="Tim Herd"
-export EMAIL="rz@eqdw.net"
+export EMAIL="tim.herd@coupa.com"
 
 export EDITOR="/usr/bin/vim"
 export PAGER="less"

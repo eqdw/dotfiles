@@ -11,7 +11,7 @@ alias "burke"="bundle exec rails console"
 alias "trt"="touch tmp/restart.txt"
 alias "rR"="rake routes"
 alias "rRg"="rake routes | grep"
-alias "rspec"="rspec -c"
+alias "berspec"="be rspec -c"
 
 function bergm() {
   $EDITOR `bundle exec rails generate migration $1 | tail -n1 | awk '{print $3}'`
@@ -22,12 +22,14 @@ function def() {
 }
 
 # git
+alias "g"="git"
 alias "gpl"="git pull"
 alias "gps"="git push"
 alias "gst"="git status"
 alias "gco"="git checkout"
 alias "ga"="git add"
 alias "ga."="git add ."
+alias "grm"="git rm"
 alias "gc"="git commit"
 alias "gcm"="git commit -m"
 

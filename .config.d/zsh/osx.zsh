@@ -5,7 +5,7 @@ set_term_bgcolor() {
   /usr/bin/osascript <<EOF
 tell application "Terminal"
    tell window 0
-      set the background color to {$(($R*65535/255)), $(($G*65535/255)), $(($B*65535/255))}
+     set the background color to {$(($R*65535/255)), $(($G*65535/255)), $(($B*65535/255))}
    end tell
 end tell
 EOF
