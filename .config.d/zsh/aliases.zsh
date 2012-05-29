@@ -24,6 +24,7 @@ function def() {
 # git
 alias "g"="git"
 alias "gpl"="git pull"
+alias "gpls"="git pull; git push"
 alias "gps"="git push"
 alias "gst"="git status"
 alias "gco"="git checkout"
