@@ -17,6 +17,10 @@ SAVEHIST=1000
 setopt \
   appendhistory \
   autocd \
+  prompt_subst \
+  auto_pushd \
+  pushd_silent \
+  correct \
   nomatch
 
 fpath=($fpath $HOME/.config.d/zsh/func)

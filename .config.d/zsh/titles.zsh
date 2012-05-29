@@ -25,4 +25,4 @@ function title() {
 # }
 
 # preexec is called just before any command line is executed
-function preexec() { title "$1"  "$USER@%m" "%55<...<%~" }
+# function preexec() { title "$1"  "$USER@%m" "%55<...<%~" }
