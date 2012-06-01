@@ -21,6 +21,11 @@ function def() {
   ack "def $*"
 }
 
+function edit-gem(){
+  vim `bundle show $1`
+}
+alias "gem-edit"="edit-gem"
+
 # git
 alias "g"="git"
 alias "gpl"="git pull"
