@@ -1,8 +1,6 @@
 /*
 !/.gitignore
-!/Library/
 !/README.md
-!/bin
 /bin/*
 !/bin/brew
 !/share/man/man1/brew.1
