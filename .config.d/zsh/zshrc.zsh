@@ -37,6 +37,8 @@ colors
 . ~/.config.d/zsh/functions.zsh
 . ~/.config.d/zsh/aliases.zsh
 . ~/.config.d/zsh/osx.zsh
+. ~/.zshrc.local
+
 
 function project_precmd() {
   if [ -z $1 ]; then
