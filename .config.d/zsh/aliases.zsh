@@ -38,7 +38,7 @@ alias "ga."="git add ."
 alias "grm"="git rm"
 alias "gc"="git commit"
 alias "gcm"="git commit -m"
-
+alias "gdf"="git diff --color"
 
 #serve up current directory
 function server {
