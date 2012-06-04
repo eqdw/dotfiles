@@ -1,0 +1,3 @@
+[submodule ".config.d/vim/janus/vim-colors-solarized"]
+	path = .config.d/vim/janus/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
