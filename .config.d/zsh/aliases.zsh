@@ -49,7 +49,7 @@ function server {
 alias "ka9"="killall -9"
 alias "k9"="kill -9"
 alias "psag"="ps aux | grep "
-alias "ls"="ls -FG "
+alias "ls"="ls -FGh "
 alias "cd.."="cd .."
 alias ".."="cd .."
 alias "u"="cd .."
