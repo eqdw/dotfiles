@@ -40,6 +40,9 @@ alias "gc"="git commit"
 alias "gcm"="git commit -m"
 alias "gdf"="git diff --color"
 alias "gcp"="git cherry-pick"
+alias "grs"="git reset"
+alias "grsh"="git reset --hard"
+
 #serve up current directory
 function server {
    ruby -rwebrick -e's=WEBrick::HTTPServer.new(:Port=>9999,:DocumentRoot=>Dir.pwd);trap("INT"){s.stop};s.start' 
