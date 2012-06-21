@@ -42,6 +42,7 @@ alias "gdf"="git diff --color"
 alias "gcp"="git cherry-pick"
 alias "grs"="git reset"
 alias "grsh"="git reset --hard"
+alias "glg"="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset' --abbrev-commit --"
 
 #serve up current directory
 function server {
