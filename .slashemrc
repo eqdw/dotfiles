@@ -16,6 +16,7 @@ OPTIONS=scores:10 top/3 around/own
 OPTIONS=pickup_burden:unencumbered
 OPTIONS=DECgraphics
 
+
 # turn ghosts and shades into 'X' - great with telepathy for bones detection
 OPTIONS=monsters:abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@X'&;:~]
 
@@ -25,6 +26,7 @@ OPTIONS=showscore
 # OPTIONS=showborn
 # OPTIONS=use_darkgray
 # OPTIONS=paranoid_remove
+OPTIONS=invweight
 
 # interhack does this for me
 #OPTIONS=!hp_monitor
@@ -162,7 +164,8 @@ MENUCOLOR=" valuable"=brown
 MENUCOLOR=" gems? .* hard"=yellow
 
 #soft gems
-MENUCOLOR=" ([0-9]+|an?|gems? .*) (uncursed |cursed |blessed )?(dilithium|opal|garnet|jasper|agate|jet|obsidian|jade|citrine|chrysoberyl|amber|amethyst|fluorite|turquoise)(e?s)?( stones?| gems?| cry
+MENUCOLOR=" ([0-9]+|an?|gems? .*) (uncursed |cursed |blessed )?(dilithium|opal|garnet|jasper|agate|jet|obsidian|jade|citrine|chrysoberyl|amber|amethyst|fluorite|turquoise)(e?s)?( stones?| gems?| crystals?)?( named .*)?$"=yellow
+
 
 #hard gems
 MENUCOLOR=" ([0-9]+|an?|gems?.*) (uncursed |cursed |blessed )?(diamond|rub(y|ies)|jacinth|sapphire|black opal|emerald|topaz|aquamarine)(e?s)?( stones?| gems?)?( named .*)?$"=yellow
