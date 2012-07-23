@@ -43,7 +43,7 @@ alias "gcp"="git cherry-pick"
 alias "grs"="git reset"
 alias "grsh"="git reset --hard"
 alias "glg"="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset' --abbrev-commit --"
-alias "gspl"="git stash && git pull && git stash apply"
+alias "gspl"="git stash && git pull && git stash pop"
 
 #serve up current directory
 function server {
