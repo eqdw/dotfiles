@@ -13,6 +13,12 @@ alias "rR"="rake routes"
 alias "rRg"="rake routes | grep"
 alias "berspec"="be rspec -c"
 
+function prRg() {
+
+  rRg $* | ruby -e 'while (line = gets); line.gsub!(/^\s*/, ""); line.gsub!(/\s+\//, "\n/"); line.gsub!(/\s*\{/, "\n{"); line += "\n"; puts line; end'
+
+}
+
 function bergm() {
   $EDITOR `bundle exec rails generate migration $1 | tail -n1 | awk '{print $3}'`
 }
