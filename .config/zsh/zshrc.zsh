@@ -23,7 +23,7 @@ setopt \
   correct \
   nomatch
 
-fpath=($fpath $HOME/.config.d/zsh/func)
+fpath=($fpath $HOME/.config/zsh/func)
 typeset -u fpath
 
 bindkey -v
@@ -31,12 +31,12 @@ bindkey -v
 autoload -Uz colors
 colors
 
-. ~/.config.d/zsh/prompts.zsh
-. ~/.config.d/zsh/titles.zsh
-. ~/.config.d/zsh/completion.zsh
-. ~/.config.d/zsh/functions.zsh
-. ~/.config.d/zsh/aliases.zsh
-. ~/.config.d/zsh/osx.zsh
+. ~/.config/zsh/prompts.zsh
+. ~/.config/zsh/titles.zsh
+. ~/.config/zsh/completion.zsh
+. ~/.config/zsh/functions.zsh
+. ~/.config/zsh/aliases.zsh
+. ~/.config/zsh/osx.zsh
 . ~/.zshrc.local
 
 

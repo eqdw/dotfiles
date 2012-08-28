@@ -5,6 +5,7 @@
 !/bin/brew
 !/share/man/man1/brew.1
 !/.config.d
+!/.config
 .DS_Store
 /Library/LinkedKegs
 /Library/Taps

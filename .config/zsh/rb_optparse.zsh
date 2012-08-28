@@ -21,8 +21,8 @@
 generate-complete-function/ruby/optparse ()
 {
     local cmpl="_${1:t}"
-    mkdir -p "${ZSH_COMPLETION_DIR-$HOME/.config.d/zsh/Completion}"
-    $1 "--*-completion-zsh=${1:t}" >! "${ZSH_COMPLETION_DIR-$HOME/.config.d/zsh/Completion}/$cmpl"
+    mkdir -p "${ZSH_COMPLETION_DIR-$HOME/.config/zsh/Completion}"
+    $1 "--*-completion-zsh=${1:t}" >! "${ZSH_COMPLETION_DIR-$HOME/.config/zsh/Completion}/$cmpl"
     if [[ $(type -w "$cmpl") == "${cmpl}: function" ]]; then
 	unfunction "$cmpl"
 	autoload -U "$cmpl"
