@@ -1,3 +1,10 @@
 syntax enable
 set background=dark
 colorscheme solarized
+
+
+function! RemovePry()
+  exec ':g/binding\.pry/d'
+endfunction
+
+map <leader>rp :call RemovePry ()<CR>
