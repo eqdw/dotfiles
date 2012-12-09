@@ -10,6 +10,8 @@ export GIT_AUTHOR_EMAIL=$EMAIL
 export GIT_COMMITTER_EMAIL=$EMAIL
 export RUBYOPT="rubygems"
 
+export PATH=/usr/local/bin:$PATH
+
 HISTFILE=~/.zsh_history
 HISTSIZE=5000
 SAVEHIST=1000
