@@ -75,3 +75,6 @@ function tarc(){
   arg=$1
   tar czvf "$1.tar.gz" "$1"
 }
+
+# irc ssh tunnel
+alias "irc_ssh"="ssh -L 6667:irc.freenode.net:6667"
