@@ -1,0 +1,9 @@
+[submodule ".config/vim/janus/VimClojure"]
+	path = .config/vim/janus/VimClojure
+	url = https://github.com/vim-scripts/VimClojure.git
+[submodule ".config/vim/janus/vim-colors-solarized"]
+	path = .config/vim/janus/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule ".config/vim/janus/vim-less"]
+	path = .config/vim/janus/vim-less
+	url = https://github.com/groenewege/vim-less.git
