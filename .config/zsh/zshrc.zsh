@@ -39,6 +39,7 @@ colors
 . ~/.config/zsh/functions.zsh
 . ~/.config/zsh/aliases.zsh
 . ~/.config/zsh/osx.zsh
+. ~/.config/zsh/ruby.zsh
 . ~/.zshrc.local
 
 

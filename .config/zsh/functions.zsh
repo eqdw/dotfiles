@@ -13,3 +13,6 @@ function reload_db {
   mysql -u root -p $1 < $2
 }
 
+function watch_controllers { 
+  tail -F log/development.log | grep "Processing by"
+}
