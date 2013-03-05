@@ -4,3 +4,6 @@
 [submodule ".config/vim/janus/vim-less"]
 	path = .config/vim/janus/vim-less
 	url = https://github.com/groenewege/vim-less.git
+[submodule "/Users/eqdw/.config/vim/janus/gitgutter"]
+	path = /Users/eqdw/.config/vim/janus/gitgutter
+	url = git@github.com:airblade/vim-gitgutter.git
