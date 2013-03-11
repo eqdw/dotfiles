@@ -52,7 +52,9 @@ alias "grsh"="git reset --hard"
 alias "glg"="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset' --abbrev-commit --"
 alias "gspl"="git stash && git pull && git stash pop"
 alias "gr"="git rebase"
-alias "grc"="git rebase --continue"
+alias "grbc"="git rebase --continue"
+alias "grbs"="git rebase --skip"
+
 
 #serve up current directory
 function server {
