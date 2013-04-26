@@ -10,3 +10,6 @@
 [submodule ".config/vim/janus/vim-textobj-rubyblock"]
 	path = .config/vim/janus/vim-textobj-rubyblock
 	url = https://github.com/nelstrom/vim-textobj-rubyblock.git
+[submodule ".config/vim/janus/vim-textobj-user"]
+	path = .config/vim/janus/vim-textobj-user
+	url = https://github.com/kana/vim-textobj-user.git
