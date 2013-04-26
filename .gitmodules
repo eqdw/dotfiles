@@ -7,6 +7,3 @@
 [submodule "/Users/eqdw/.config/vim/janus/gitgutter"]
 	path = /Users/eqdw/.config/vim/janus/gitgutter
 	url = git@github.com:airblade/vim-gitgutter.git
-[submodule "janus/vim-textobj-rubyblock"]
-	path = janus/vim-textobj-rubyblock
-	url = git@github.com:nelstrom/vim-textobj-rubyblock.git
