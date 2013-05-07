@@ -54,6 +54,7 @@ alias "gspl"="git stash && git pull && git stash pop"
 alias "gr"="git rebase"
 alias "grbc"="git rebase --continue"
 alias "grbs"="git rebase --skip"
+alias "ggbp"="git diff | grep 'binding.pry'"
 
 
 #serve up current directory
