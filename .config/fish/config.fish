@@ -98,7 +98,7 @@ function lol
   
   set FORMAT "$HASH}$RELATIVE_TIME}$AUTHOR}$REFS $SUBJECT"
 
-  git log -1000 --pretty="tformat:$FORMAT" $argv | set -Ee 's/(^[^<]*) ago)/\1)/' | sed -Ee 's/(^[^<]*), [[:digit:]]+ .*months?)/\1)/' | column -s '}' -t | less -FXRS
+  git log -1000 --pretty="tformat:$FORMAT" $argv | sed -Ee 's/(^[^<]*) ago)/\1)/' | sed -Ee 's/(^[^<]*), [[:digit:]]+ .*months?)/\1)/' | column -s '}' -t | less -FXRS
 end
 
 function grim  ; git rebase -i master          ; end
