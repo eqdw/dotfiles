@@ -13,3 +13,6 @@
 /Library/Taps
 /Library/Formula/.gitignore
 .zshrc.local
+.config/fish/fish_history
+.config/fish/fishd.*
+.config/libimobiledevice
