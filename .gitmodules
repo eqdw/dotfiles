@@ -4,3 +4,12 @@
 [submodule ".config/vim/janus/vim-less"]
 	path = .config/vim/janus/vim-less
 	url = https://github.com/groenewege/vim-less.git
+[submodule "/Users/eqdw/.config/vim/janus/gitgutter"]
+	path = /Users/eqdw/.config/vim/janus/gitgutter
+	url = git@github.com:airblade/vim-gitgutter.git
+[submodule ".config/vim/janus/vim-textobj-rubyblock"]
+	path = .config/vim/janus/vim-textobj-rubyblock
+	url = https://github.com/nelstrom/vim-textobj-rubyblock.git
+[submodule ".config/vim/janus/vim-textobj-user"]
+	path = .config/vim/janus/vim-textobj-user
+	url = https://github.com/kana/vim-textobj-user.git

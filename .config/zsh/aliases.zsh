@@ -7,6 +7,7 @@ alias "bi"="bundle install"
 alias "bu"="bundle update"
 alias "be"="bundle exec"
 alias "ber"="bundle exec rails"
+alias "berp"="RAILS_ENV=production bundle exec rails"
 alias "burke"="bundle exec rails console"
 alias "trt"="touch tmp/restart.txt"
 alias "rR"="rake routes"
@@ -50,6 +51,11 @@ alias "grs"="git reset"
 alias "grsh"="git reset --hard"
 alias "glg"="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset' --abbrev-commit --"
 alias "gspl"="git stash && git pull && git stash pop"
+alias "gr"="git rebase"
+alias "grbc"="git rebase --continue"
+alias "grbs"="git rebase --skip"
+alias "ggbp"="git diff | grep 'binding.pry'"
+
 
 #serve up current directory
 function server {

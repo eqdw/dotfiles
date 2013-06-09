@@ -2,6 +2,7 @@
 !/.janus/*
 !/.gitignore
 !/README.md
+!.vimrc.after
 /bin/*
 !/bin/brew
 !/share/man/man1/brew.1
