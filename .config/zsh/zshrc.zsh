@@ -60,5 +60,3 @@ function project_precmd() {
 }
 
 precmd_functions+=(project_precmd)
-PATH=$PATH:$HOME/.rvm/bin
-[[ -s "/Users/eqdw/.rvm/scripts/rvm" ]] && source "/Users/eqdw/.rvm/scripts/rvm"
