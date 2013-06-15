@@ -21,12 +21,12 @@ set -x EMAIL rz@eqdw.net
 set -x PAGER less
 set -x GIT
 
-set -x GIT_AUTHOR_NAME=$NAME
-set -x GIT_COMMITTER_NAME=$NAME
-set -x GIT_AUTHOR_EMAIL=$EMAIL
-set -x GIT_COMMITTER_EMAIL=$EMAIL
-set -x RUBYOPT="rubygems"
-set -x PATH=/usr/local/bin:$PATH
+set -x GIT_AUTHOR_NAME $NAME
+set -x GIT_COMMITTER_NAME $NAME
+set -x GIT_AUTHOR_EMAIL $EMAIL
+set -x GIT_COMMITTER_EMAIL $EMAIL
+set -x RUBYOPT "rubygems"
+set -x PATH /usr/local/bin $PATH
 
 
 
@@ -138,3 +138,7 @@ if mac
 else
   eval (dircolors -b ~/.LS_COLORS | grep -v export | sed 's/LS_COLORS=/set -x LS_COLORS /')
 end
+
+
+##### Eval local terminal customizations
+. ~/.fishrc.local
