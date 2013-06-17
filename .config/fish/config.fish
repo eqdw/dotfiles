@@ -108,6 +108,7 @@ function gpl   ; git pull $argv                ; end
 function gps   ; git push $argv                ; end
 function gst   ; git status $argv              ; end
 function gco   ; git checkout $argv            ; end
+function gcom  ; git checkout master           ; end
 function ga    ; git add $argv                 ; end
 function ga.   ; git add .                     ; end
 function grm   ; git remote $argv              ; end
