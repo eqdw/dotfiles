@@ -16,3 +16,6 @@ endfunction
 map <leader>rp :call RemovePry ()<CR>
 
 filetype plugin indent on
+
+"Fish compatibility
+set sh=bash

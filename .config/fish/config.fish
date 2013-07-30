@@ -141,5 +141,12 @@ else
 end
 
 
+##### RBENV ###########
+set PATH $HOME/.rbenv/bin $PATH
+set PATH $HOME/.rbenv/shims $PATH
+
+rbenv rehash >/dev/null ^&1
+##### END RBENV #######
+
 ##### Eval local terminal customizations
 . ~/.fishrc.local
