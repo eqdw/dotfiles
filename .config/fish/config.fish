@@ -15,7 +15,7 @@ function linux ; test (uname -s) = "Linux"  ; end
 
 
 set -x EDITOR vim
-set -x NAME Tim Herd
+set -x NAME "Tim Herd"
 set -x EMAIL rz@eqdw.net
 
 set -x PAGER less
@@ -68,20 +68,25 @@ else
 end
 
 ##### bundler ########################################
-function bi      ; bundle install             ; end
-function bo      ; bundle open $argv          ; end
-function bu      ; bundle update $argv        ; end
-function bs      ; bundle show $argv          ; end
-function be      ; bundle exec $argv          ; end
-function ber     ; bundle exec rails $argv    ; end
-function burke   ; bundle exec rails console  ; end
+function bi      ; bundle install                  ; end
+function bo      ; bundle open $argv               ; end
+function bu      ; bundle update $argv             ; end
+function bs      ; bundle show $argv               ; end
+function be      ; bundle exec $argv               ; end
+function ber     ; bundle exec rails $argv         ; end
+function burke   ; bundle exec rails console       ; end
+function beg     ; bundle exec guard $argv         ; end
+function befs    ; bundle exec foreman start $argv ; end
 
 function trt     ; touch tmp/restart.txt      ; end
 function rR      ; rake routes                ; end
 function rRg     ; rake routes | grep $argv   ; end
 function berspec ; bundle exec rspec -c $argv ; end
 
-function prRg 
+function rlc     ; tail -f log/development.log | grep "Processing by" ; end
+function rlv     ; tail -f log/development.log | grep "Rendered"      ; end
+
+function prRg
   rRg $argv | ruby -e 'while (line = gets); line.gsub!(/^\s*/, ""); line.gsub!(/\s+*/. "\n/"); line.gsub!(/\s*\{/. "\n{"); line += "\n"; puts line; end'
 end
 
