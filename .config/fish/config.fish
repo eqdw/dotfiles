@@ -29,6 +29,13 @@ set -x RUBYOPT "rubygems"
 set -x PATH /usr/local/bin $PATH
 
 
+##### My Git Config #####
+# I do this here instead of checking in .gitconfig because I need to be able to 
+# override it on a per-machine basis
+git config --global push.default current
+git config --global color.ui true
+### END My Git Config ###
+
 
 ##### MISC #####
 function def ; ack "def $argv" ; end
