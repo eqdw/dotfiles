@@ -120,6 +120,7 @@ function gpl   ; git pull $argv                ; end
 function gps   ; git push $argv                ; end
 function gst   ; git status $argv              ; end
 function gco   ; git checkout $argv            ; end
+function gcob  ; git checkout -b $argv         ; end
 function gcom  ; git checkout master           ; end
 function ga    ; git add $argv                 ; end
 function ga.   ; git add .                     ; end
@@ -137,7 +138,20 @@ function ghgs  ; ghg coupa/coupa_development   ; end
 
 
 
-##### Utilities #################### 
+##### Marking and Jumping ##########
+function mark
+  ln -s (pwd) ~/.jump/$argv[1]
+end
+function unmark
+  rm ~/.jump/$argv[1]
+end
+function jump
+  cd ~/.jump/$argv[1]
+end
+
+
+
+##### Utilities ####################
 function r ; ruby $argv            ; end
 function e ; vim $argv 2>/dev/null ; end
 
