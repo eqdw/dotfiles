@@ -28,6 +28,9 @@ set -x GIT_COMMITTER_EMAIL $EMAIL
 set -x RUBYOPT "rubygems"
 set -x PATH /usr/local/bin $PATH
 
+# so that we actually know I'm running FISH
+set -x FISH "Very Yes"
+
 
 ##### My Git Config #####
 # I do this here instead of checking in .gitconfig because I need to be able to 
