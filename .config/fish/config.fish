@@ -88,6 +88,14 @@ function burke   ; bundle exec rails console       ; end
 function beg     ; bundle exec guard $argv         ; end
 function befs    ; bundle exec foreman start $argv ; end
 
+function bers
+  if rails --version | grep "Rails 3" > /dev/null 2>&1
+    bundle exec rails server $argv
+  else
+    bundle exec script/server $argv
+  end
+end
+
 function trt     ; touch tmp/restart.txt      ; end
 function rR      ; rake routes                ; end
 function rRg     ; rake routes | grep $argv   ; end
