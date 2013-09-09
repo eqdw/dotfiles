@@ -53,7 +53,7 @@ function cpip
 end
 
 function pyserv
-  echo http://(ifconfig en0 | grep inet | awk '{print $2}' | tail -n1):8000 | pbcop
+  echo http://(ifconfig en0 | grep inet | awk '{print $2}' | tail -n1):8000 | pbcopy
   python -m SimpleHTTPServer
 end
 
@@ -77,6 +77,7 @@ else
   function ls ;  ls --color=auto -Fh $argv ; end
 end
 
+
 ##### bundler ########################################
 function bi      ; bundle install                  ; end
 function bo      ; bundle open $argv               ; end
@@ -84,7 +85,6 @@ function bu      ; bundle update $argv             ; end
 function bs      ; bundle show $argv               ; end
 function be      ; bundle exec $argv               ; end
 function ber     ; bundle exec rails $argv         ; end
-function burke   ; bundle exec rails console       ; end
 function beg     ; bundle exec guard $argv         ; end
 function befs    ; bundle exec foreman start $argv ; end
 
@@ -95,6 +95,15 @@ function bers
     bundle exec script/server $argv
   end
 end
+
+function berc
+  if rails --version | grep "Rails 3" > /dev/null 2>&1
+    bundle exec rails console $argv
+  else
+    bundle exec script/console $argv
+  end
+end
+function burke ; berc ; end
 
 function trt     ; touch tmp/restart.txt      ; end
 function rR      ; rake routes                ; end
