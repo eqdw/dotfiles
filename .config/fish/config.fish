@@ -41,7 +41,7 @@ git config --global color.ui true
 
 
 ##### MISC #####
-function def ; ack "def $argv" ; end
+function def ; ack "def (self\.)?$argv" ; end
 
 function bergm ; e (bundle exec rails generate migration $argv[1] | tail -n1 | awk '{print $3}') ; end
 function elm   ; e db/migrate/(ls db/migrate | tail -n1) ; end
@@ -133,6 +133,7 @@ function lol
   git log -1000 --pretty="tformat:$FORMAT" $argv | sed -Ee 's/(^[^<]*) ago)/\1)/' | sed -Ee 's/(^[^<]*), [[:digit:]]+ .*months?)/\1)/' | column -s '}' -t | less -FXRS
 end
 
+
 function grim  ; git rebase -i master          ; end
 function gam   ; git commit --amend -m "$argv" ; end
 
@@ -148,9 +149,23 @@ function grm   ; git remote $argv              ; end
 function gc    ; git commit $argv              ; end
 function gcm   ; git commit -m $argv           ; end
 function gdf   ; git diff --color $argv        ; end
+function gdl   ; gdf HEAD~1 HEAD               ; end
+function gdn   ; gdf HEAD~$argv[1] HEAD        ; end
 function gcp   ; git cherry-pick $argv         ; end
 function grs   ; git reset $argv               ; end
 function grsh  ; git reset --hard $argv        ; end
+function gbd   ; git branch -D $argv           ; end
+
+# fetch upstream and merge
+function gpu
+  git fetch upstream
+  git merge upstream/$argv[1] $argv[1]
+end
+function gpum
+  git fetch upstream
+  git merge upstream/master master
+end
+
 
 function ghg   ; open https://github.com/$argv ; end
 function ghge  ; ghg eqdw/$argv                ; end
