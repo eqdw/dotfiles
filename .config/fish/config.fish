@@ -135,6 +135,7 @@ end
 
 
 function grim  ; git rebase -i master          ; end
+function gri   ; git rebase -i $argv           ; end
 function gam   ; git commit --amend -m "$argv" ; end
 
 function gpl   ; git pull $argv                ; end
@@ -155,16 +156,8 @@ function gcp   ; git cherry-pick $argv         ; end
 function grs   ; git reset $argv               ; end
 function grsh  ; git reset --hard $argv        ; end
 function gbd   ; git branch -D $argv           ; end
-
-# fetch upstream and merge
-function gpu
-  git fetch upstream
-  git merge upstream/$argv[1] $argv[1]
-end
-function gpum
-  git fetch upstream
-  git merge upstream/master master
-end
+function gpu   ; git pull upstream $argv       ; end
+function gpum  ; git pull upstream master      ; end
 
 
 function ghg   ; open https://github.com/$argv ; end
