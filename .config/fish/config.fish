@@ -112,6 +112,8 @@ function berspec ; bundle exec rspec -c $argv ; end
 
 function rlc     ; tail -f log/development.log | grep "Processing by" ; end
 function rlv     ; tail -f log/development.log | grep "Rendered"      ; end
+function rli     ; tail -f log/development.log | grep "INFO"          ; end
+
 
 function prRg
   rRg $argv | ruby -e 'while (line = gets); line.gsub!(/^\s*/, ""); line.gsub!(/\s+*/. "\n/"); line.gsub!(/\s*\{/. "\n{"); line += "\n"; puts line; end'
@@ -159,6 +161,13 @@ function gbd   ; git branch -D $argv           ; end
 function gpu   ; git pull upstream $argv       ; end
 function gpum  ; git pull upstream master      ; end
 
+# pull new branch from upstream
+function gbu
+  git fetch upstream
+  git checkout upstream/$argv[1]
+  git checkout -b $argv[1]
+  git push origin $argv[1]
+end
 
 function ghg   ; open https://github.com/$argv ; end
 function ghge  ; ghg eqdw/$argv                ; end
