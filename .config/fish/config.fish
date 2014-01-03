@@ -4,12 +4,6 @@ function fish_prompt ; /Users/eqdw/src/wunderprompt-fish/prompt $status ; end
 
 set fish_greeting ""
 
-set -x RUBY_HEAP_MIN_SLOTS 1000000
-set -x RUBY_HEAP_SLOTS_INCREMENT 1000000
-set -x RUBY_HEAP_SLOTS_GROWTH_FACTOR 1
-set -x RUBY_GC_MALLOC_LIMIT 1000000000
-set -x RUBY_HEAP_FREE_MIN 500000
-
 function mac   ; test (uname -s) = "Darwin" ; end
 function linux ; test (uname -s) = "Linux"  ; end
 
