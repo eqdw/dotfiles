@@ -1,0 +1,12 @@
+machines
+zeltennia ==> MacBook Air
+gariland  ==> Desktop
+orbonne   ==> NAS
+goug (?)  ==> Work Computer
+
+
+networks
+lesalia   ==> Home Wifi
+bervennia ==> Airport Express
+
+
