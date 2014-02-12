@@ -123,7 +123,7 @@ function lol
   set AUTHOR "%C(blue)<%an>%Creset"
   set REFS "%C(red)%d%Creset"
   set SUBJECT "%s"
-  
+
   set FORMAT "$HASH}$RELATIVE_TIME}$AUTHOR}$REFS $SUBJECT"
 
   git log -1000 --pretty="tformat:$FORMAT" $argv | sed -Ee 's/(^[^<]*) ago)/\1)/' | sed -Ee 's/(^[^<]*), [[:digit:]]+ .*months?)/\1)/' | column -s '}' -t | less -FXRS
@@ -132,6 +132,8 @@ end
 
 function grim  ; git rebase -i master          ; end
 function gri   ; git rebase -i $argv           ; end
+function gm    ; git merge $argv               ; end
+function gmm   ; git merge master              ; end
 function gam   ; git commit --amend -m "$argv" ; end
 
 function gpl   ; git pull $argv                ; end
