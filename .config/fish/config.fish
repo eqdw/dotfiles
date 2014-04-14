@@ -83,18 +83,18 @@ function beg     ; bundle exec guard $argv         ; end
 function befs    ; bundle exec foreman start $argv ; end
 
 function bers
-  if rails --version | grep "Rails 3" > /dev/null 2>&1
-    bundle exec rails server $argv
-  else
+  if rails --version | grep "Rails 2" > /dev/null 2>&1
     bundle exec script/server $argv
+  else
+    bundle exec rails server $argv
   end
 end
 
 function berc
-  if rails --version | grep "Rails 3" > /dev/null 2>&1
-    bundle exec rails console $argv
-  else
+  if rails --version | grep "Rails 2" > /dev/null 2>&1
     bundle exec script/console $argv
+  else
+    bundle exec rails console $argv
   end
 end
 function burke ; berc ; end
