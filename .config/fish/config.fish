@@ -154,6 +154,7 @@ function gcp   ; git cherry-pick $argv         ; end
 function grs   ; git reset $argv               ; end
 function grsh  ; git reset --hard $argv        ; end
 function gbd   ; git branch -D $argv           ; end
+function gbdr  ; git push origin :$argv        ; end
 function gpu   ; git pull upstream $argv       ; end
 function gpum  ; git pull upstream master      ; end
 
