@@ -170,6 +170,10 @@ function ghg   ; open https://github.com/$argv ; end
 function ghge  ; ghg eqdw/$argv                ; end
 function ghgs  ; ghg coupa/coupa_development   ; end
 
+##### Vagrant #####################
+function vssh
+  vagrant ssh
+end
 
 
 ##### Marking and Jumping ##########
