@@ -35,7 +35,7 @@ git config --global color.ui true
 
 
 ##### MISC #####
-function def ; ack "def (self\.)?$argv" ; end
+function def ; ag "def (self\.)?$argv" ; end
 
 function bergm ; e (bundle exec rails generate migration $argv[1] | tail -n1 | awk '{print $3}') ; end
 function elm   ; e db/migrate/(ls db/migrate | tail -n1) ; end
