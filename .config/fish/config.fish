@@ -35,19 +35,21 @@ git config --global color.ui true
 
 
 ##### MISC #####
-function def ; ag "def (self\.)?$argv" ; end
+function def    ; ag "def (self\.)?$argv"   ; end
+function class  ; ag "class (\w+::)*$argv"  ; end
+function module ; ag "module (\w+::)*$argv" ; end
 
 function bergm ; e (bundle exec rails generate migration $argv[1] | tail -n1 | awk '{print $3}') ; end
 function elm   ; e db/migrate/(ls db/migrate | tail -n1) ; end
 
 function cpip
-  set ip (ifconfig en0 | grep inet | awk '{print $2}' | tail -n1)
+  set ip (ifconfig en0 | grep 'inet[^6]' | awk '{print $2}' | tail -n1)
   echo $ip | pbcopy
   echo $ip
 end
 
 function pyserv
-  echo http://(ifconfig en0 | grep inet | awk '{print $2}' | tail -n1):8000 | pbcopy
+  echo http://(ifconfig en0 | grep 'inet[^6]' | awk '{print $2}' | tail -n1):8000 | pbcopy
   python -m SimpleHTTPServer
 end
 
@@ -64,6 +66,7 @@ function uuuuuu ; cd ../../../../../..              ; end
 function tarx   ; tar xzvf $argv                    ; end
 function tarc   ; tar czvf $argv[1].tar.gz $argv[1] ; end
 
+function ff     ; find . | grep $argv               ; end
 
 if mac
   function ls ; gls --color=auto -Fh $argv ; end
@@ -83,15 +86,19 @@ function beg     ; bundle exec guard $argv         ; end
 function befs    ; bundle exec foreman start $argv ; end
 
 function bers
-  if rails --version | grep "Rails 2" > /dev/null 2>&1
+  if bundle exec rails --version | grep "Rails 2" > /dev/null 2>&1
     bundle exec script/server $argv
   else
     bundle exec rails server $argv
   end
 end
 
+function bert
+  bundle exec thin start
+end
+
 function berc
-  if rails --version | grep "Rails 2" > /dev/null 2>&1
+  if bundle exec rails --version | grep "Rails 2" > /dev/null 2>&1
     bundle exec script/console $argv
   else
     bundle exec rails console $argv
