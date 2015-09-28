@@ -1,6 +1,6 @@
 # most of this file thanks to github.com/burke
 
-function fish_prompt ; /Users/eqdw/src/wunderprompt-fish/prompt $status ; end
+function fish_prompt ; /Users/tim.herd/src/wunderprompt/prompt $status ; end
 
 set fish_greeting ""
 
@@ -139,6 +139,7 @@ end
 
 function grim  ; git rebase -i master          ; end
 function gri   ; git rebase -i $argv           ; end
+function grih  ; git rebase -i HEAD~$argv      ; end
 function gm    ; git merge $argv               ; end
 function gmm   ; git merge master              ; end
 function gam   ; git commit --amend -m "$argv" ; end
