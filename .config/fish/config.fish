@@ -70,10 +70,9 @@ function ff     ; find . | grep $argv               ; end
 
 if mac
   function ls ; gls --color=auto -Fh $argv ; end
-else 
+else
   function ls ;  ls --color=auto -Fh $argv ; end
 end
-
 
 ##### bundler ########################################
 function bi      ; bundle install                  ; end
@@ -142,7 +141,6 @@ function gri   ; git rebase -i $argv           ; end
 function grih  ; git rebase -i HEAD~$argv      ; end
 function gm    ; git merge $argv               ; end
 function gmm   ; git merge master              ; end
-function gam   ; git commit --amend -m "$argv" ; end
 
 function gpl   ; git pull $argv                ; end
 function gps   ; git push $argv                ; end
@@ -155,6 +153,8 @@ function ga.   ; git add .                     ; end
 function grm   ; git remote $argv              ; end
 function gc    ; git commit $argv              ; end
 function gcm   ; git commit -m $argv           ; end
+function gca   ; git commit --amend $argv      ; end
+function gcam  ; git commit --amend -m "$argv" ; end
 function gdf   ; git diff --color $argv        ; end
 function gdl   ; gdf HEAD~1 HEAD               ; end
 function gdn   ; gdf HEAD~$argv[1] HEAD        ; end
@@ -176,7 +176,6 @@ end
 
 function ghg   ; open https://github.com/$argv ; end
 function ghge  ; ghg eqdw/$argv                ; end
-function ghgs  ; ghg coupa/coupa_development   ; end
 
 ##### Vagrant #####################
 function vssh
