@@ -68,6 +68,8 @@ function tarc   ; tar czvf $argv[1].tar.gz $argv[1] ; end
 
 function ff     ; find . | grep $argv               ; end
 
+function cptf   ; cat $argv | pbcopy                ; end
+
 if mac
   function ls ; gls --color=auto -Fh $argv ; end
 else
