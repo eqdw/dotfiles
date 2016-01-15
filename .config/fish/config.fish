@@ -1,6 +1,6 @@
 # most of this file thanks to github.com/burke
 
-function fish_prompt ; /Users/tim.herd/src/wunderprompt/prompt $status ; end
+function fish_prompt ; /Users/eqdw/src/wunderprompt-fish/prompt $status ; end
 
 set fish_greeting ""
 
