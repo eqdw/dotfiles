@@ -27,7 +27,7 @@ set -x FISH "Very Yes"
 
 
 ##### My Git Config #####
-# I do this here instead of checking in .gitconfig because I need to be able to 
+# I do this here instead of checking in .gitconfig because I need to be able to
 # override it on a per-machine basis
 git config --global push.default current
 git config --global color.ui true
@@ -99,11 +99,7 @@ function bert
 end
 
 function berc
-  if bundle exec rails --version | grep "Rails 2" > /dev/null 2>&1
-    bundle exec script/console $argv
-  else
-    bundle exec rails console $argv
-  end
+  bundle exec rails console $argv
 end
 function burke ; berc ; end
 
@@ -120,6 +116,14 @@ function rli     ; tail -f log/development.log | grep "INFO"          ; end
 function prRg
   rRg $argv | ruby -e 'while (line = gets); line.gsub!(/^\s*/, ""); line.gsub!(/\s+*/. "\n/"); line.gsub!(/\s*\{/. "\n{"); line += "\n"; puts line; end'
 end
+
+
+##### phoenix ########################################
+function m    ; mix $argv                 ; end
+function mec  ; mix ecto.create           ; end
+function mps  ; mix phoenix.server        ; end
+function ism  ; iex -S mix $argv          ; end
+function isms ; iex -S mix phoenix.server ; end
 
 
 ##### git ############################################
