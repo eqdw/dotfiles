@@ -219,11 +219,8 @@ end
 
 ##### RBENV ###########
 set PATH $HOME/.rbenv/bin $PATH
-set PATH $HOME/.rbenv/shims $PATH
 
 set -gx RBENV_ROOT $HOME/.rbenv
-
-. (rbenv init -|psub)
 
 rbenv rehash >/dev/null ^&1
 ##### END RBENV #######
