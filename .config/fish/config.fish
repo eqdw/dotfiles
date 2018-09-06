@@ -19,7 +19,6 @@ set -x GIT_AUTHOR_NAME $NAME
 set -x GIT_COMMITTER_NAME $NAME
 set -x GIT_AUTHOR_EMAIL $EMAIL
 set -x GIT_COMMITTER_EMAIL $EMAIL
-set -x RUBYOPT "rubygems"
 set -x PATH /usr/local/bin $PATH
 
 # so that we actually know I'm running FISH
