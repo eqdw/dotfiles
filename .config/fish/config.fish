@@ -38,7 +38,7 @@ function def    ; ag "def (self\.)?$argv"   ; end
 function class  ; ag "class (\w+::)*$argv"  ; end
 function module ; ag "module (\w+::)*$argv" ; end
 
-function bergm ; e (bundle exec rails generate migration $argv[1] | tail -n1 | awk '{print $3}') ; end
+function bergm ; e (bundle exec rails generate migration $argv | tail -n1 | awk '{print $2}') ; end
 function elm   ; e db/migrate/(ls db/migrate | tail -n1) ; end
 
 function cpip
